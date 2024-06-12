@@ -7,4 +7,6 @@ Route::get('/projects', [ProjectController::class, 'index']);
 
 4. Testo l'url su Postman (http://127.0.0.1:8000/api/projects)
 
-5. CREO LA SECONDA REPO: vite-boolfolio
+5. CREO LA SECONDA REPO: vite-boolfolio (e lavoro su quella)
+
+6. BONUS: paginazione->nel ProjectController applico l'eadger loading sfruttando il metodo with() ed invoco il metodo paginate(), dichiarando quanti elementi voglio visualizzare in pagina nell'altra REPO (lavoro su quella dal punto 15.)
