@@ -5,4 +5,6 @@
 3. Nella cartella routes apro il file api.php e, dopo aver importato il ProjectController della cartella Api, dichiaro la rotta per la chiamata API, mediante il metodo statico get
 Route::get('/projects', [ProjectController::class, 'index']);
 
-4. CREO LA SECONDA REPO vite-boolfolio
+4. Testo l'url su Postman (http://127.0.0.1:8000/api/projects)
+
+5. CREO LA SECONDA REPO: vite-boolfolio
