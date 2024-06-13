@@ -17,4 +17,14 @@ class ProjectController extends Controller
             'projects'=>$projects
         ]);
     }
+
+
+    public function singleProject(){
+
+        $project = Project::with('technologies', 'type')->first();
+
+        return response()->json([
+            'project'=>$project
+        ]);
+    }
 }
