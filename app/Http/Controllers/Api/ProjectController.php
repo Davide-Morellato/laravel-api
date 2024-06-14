@@ -19,9 +19,9 @@ class ProjectController extends Controller
     }
 
 
-    public function singleProject(){
+    public function singleProject(Project $project){
 
-        $project = Project::with('technologies', 'type')->first();
+        $project->load('technologies', 'type');
 
         return response()->json([
             'project'=>$project

@@ -13,5 +13,5 @@ Route::get('/projects', [ProjectController::class, 'index']);
 
 -- PARTE 2 --
 
-7. BONUS 2: Nel ProjectController Ho dichiarato una p.f. singleProject() in cui prendo il singolo progetto e mi restituisco una response in formato json, al cui interno passo come parametro un array associativo contente come chiave 'project' e come valore la variabile in cui ho salvato il project ($project) e in api.php ho registrato una nuova rotta parametrica per la chiamata API
-[Route::get('/projects/{project}', [ProjectController::class, 'singleProject']);]
+7. BONUS 2: Nel ProjectController Ho dichiarato una p.f. singleProject() in cui prendo il singolo progetto e, tramite l'eager loading load, prendo anche le relazioni technologies e type, facendomi restituire una response in formato json, al cui interno passo come parametro un array associativo contente come chiave 'project' e come valore la variabile in cui ho salvato il project ($project) e in api.php ho registrato una nuova rotta parametrica per la chiamata API, assegnando come parametro di ricerca la colonna slug
+[Route::get('/projects/{project:slug}', [ProjectController::class, 'singleProject']);]
